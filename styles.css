@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+	font-family: "EB Garamond", serif;
+  font-style: normal;
+	font-size: 1.2rem;
+	background-color: #FAFAFA;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+	width: 100%;
+}
+
+header {
+	background-color: #131B23;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+nav a, nav button {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+	font-size: 1.4rem;
+}
+
+nav a:hover, nav button:hover,
+nav a.active {
+  background-color: #555;
+}
+
+
+nav .icon {
+	display: none;
+}
+
+
+.hero {
+  background-color: #E9F1F7;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-small {
+	min-height: 150px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+
+main {
+	flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+
+figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+iframe {
+	border: 0;
+	height: 100%;
+	width: 400px;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+	filter: brightness(0.9);
+}
+
+img, iframe {
+	margin-bottom: 8px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+footer {
+	display: flex;
+	align-items: center;
+	background-color: #E7DFC6;
+  text-align: center;
+	font-size: 1rem;
+}
+
+address {
+	font-style: initial;
+}
+
+
+.center {
+	text-align: center;
+}
+
+form {
+	
+  flex: 0 0 600px;
+
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.6rem;
+	font-weight: bold;
+  margin-bottom: 12px;
+}
+
+label {
+	
+  display: block;
+
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+	padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(19, 27, 35, 0.12);
+  border-radius: 8px;
+  background: #FBFBFB;
+  font-size: 1rem;
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+input[type="number"] {
+  max-width: 100px;
+}
+
+button {
+  background-color: #131B23;
+  color: white;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(19, 27, 35, 0.12);
+}
+
+
+#aktiviteter {
+	padding: 20px;
+	font-size: 1.3rem;
+	margin-right: 40px;
+
+	
+	flex: 0 0 600px;
+}
+
+#aktiviteter h2 {
+	margin-bottom: 10px;
+}
+
+#aktiviteter ul {
+	padding: 20px;
+	margin-left: 10px;
+}
+
+
+@media (max-width: 1100px) {
+	
+  nav a:not(:first-child) {
+    display: none;
+  }
+
+  nav button.icon {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+	nav a.active {
+		background-color: #131B23;
+	}
+
+	nav a:hover, nav button:hover {
+		background-color: #555;
+	}
+
+	nav.open {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav.open a {
+		display: block;
+	}
+
+  .hero {
+    min-height: 120px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+		text-align: center;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  img {
+    height: 225px;
+  }
+
+	#aktiviteter {
+		flex: initial;
+	}
+
+	iframe {
+		border: 0;
+		height: 400px;
+		width: 100%;
+	}
+}
